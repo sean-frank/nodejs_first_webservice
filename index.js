@@ -4,8 +4,23 @@ const path = require('node:path')
 const port = 8000
 
 const server = http.createServer(function(req, res){
-    console.log(req.path)
-    res.writeHead(200, { 'Content-Type' : 'text/html' })
+    let urlpath = req.url.split('?')[0]
+    console.log(urlpath)
+    if (urlpath == '/login') {
+            res.writeHead(200, { 'Content-Type' : 'text/html' })
+    fs.readFile('login.html', function(error, data) {
+        if (error) {
+            res.writeHead(404)
+            res.write('Error: File Not Found')
+        }
+        else {
+            res.write(data)
+        }
+        res.end()
+    })
+    }
+    else {
+            res.writeHead(200, { 'Content-Type' : 'text/html' })
     fs.readFile('index.html', function(error, data) {
         if (error) {
             res.writeHead(404)
@@ -16,6 +31,7 @@ const server = http.createServer(function(req, res){
         }
         res.end()
     })
+    }
 })
 
 server.listen(port, function(error){
@@ -26,3 +42,4 @@ server.listen(port, function(error){
         console.log('Server is listening on port: ' + port)
     }
 })
+

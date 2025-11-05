@@ -1,55 +1,129 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<head>
-    <title>My Website</title>
-    <style>
-        *,
-        html {
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sean Frank</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+                background-color: #f4f9f9;
+                color: #333;
+            }
 
-        html {
-            width: 100%;
-            height: 100%;
-        }
+            h1,
+            h2 {
+                color: #0066cc;
+            }
 
-        body {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background-color: rgb(236, 152, 42);
-        }
+            header,
+            section {
+                max-width: 800px;
+                margin: auto;
+            }
 
-        .center {
-            width: 100%;
-            height: 50%;
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-family: "Trebuchet MS", Helvetica, sans-serif;
-            text-align: center;
-        }
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                gap: 20px;
+            }
 
-        h1 {
-            font-size: 144px;
-        }
+            nav {
+                background-color: #f4f9f9;
+                padding: 10px;
+                border-radius: 5px;
+            }
 
-        p {
-            font-size: 64px;
-        }
-    </style>
-</head>
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
 
-<body>
-    <div class="center">
-        <h1>Hello World!</h1>
-        <p>This is served from a file</p>
-    </div>
-</body>
+            nav li {
+                margin: 5px 0;
+            }
+
+            .resume-content h2,
+            .profile p,
+            .skills ul,
+            .experience div {
+                margin-bottom: 20px;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+                font-size: 14px;
+                color: #777;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="login">Login</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="resume-content">
+                    <h1>Sean Frank</h1>
+                    <p>Email: john.doe@example.com | Phone: +123 456 7890 | LinkedIn: linkedin.com/in/johndoe</p>
+
+                    <section id="profile">
+                        <h2>Profile</h2>
+                        <p>
+                            Experienced software developer with over 5 years of expertise in building scalable web applications.
+                            Passionate about learning new technologies and finding innovative solutions.
+                        </p>
+                    </section>
+
+                    <section id="skills">
+                        <h2>Skills</h2>
+                        <ul>
+                            <li>JavaScript (React, Node.js)</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>Python</li>
+                            <li>Databases (SQL, MongoDB)</li>
+                            <li>Version Control (Git)</li>
+                        </ul>
+                    </section>
+
+                    <section id="experience">
+                        <h2>Experience</h2>
+
+                        <div>
+                            <h3>Senior Software Developer at TechCorp</h3>
+                            <p><em>June 2018 - Present</em></p>
+                            <p>
+                                Led the development of a new feature in a high-traffic web application,
+                                improving performance by 30%.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Software Developer at DevSolutions</h3>
+                            <p><em>January 2016 - May 2018</em></p>
+                            <p>
+                                Collaborated with a team to design and implement new software solutions,
+                                increasing client satisfaction by 25%.
+                            </p>
+                        </div>
+                    </section>
+
+                    <footer id="contact">
+                        Feel free to reach out for any opportunities or collaborations!
+                    </footer>
+                </div>
+            </div>
+        </header>
+    </body>
 
 </html>
